@@ -40,21 +40,17 @@ body {
 /* Awan */
 .awan {
   position: absolute;
-  background: white;
-  border-radius: 50%;
+  width: 150px;
+  height: auto;
   opacity: 0.95;
 }
 
 .awan-1 {
-  width: 120px;
-  height: 60px;
   top: 8%;
   left: 5%;
 }
 
 .awan-2 {
-  width: 150px;
-  height: 70px;
   top: 10%;
   right: 5%;
 }
