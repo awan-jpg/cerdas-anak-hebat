@@ -28,23 +28,74 @@ body {
   justify-content: center;
 }
 
-/* === LAYAR 1: PEMBUKA === */
-.latar-pembuka {
+/* === LAYAR 1: PEMBUKA — DIPERINDAH === */
+#latar-pembuka {
   position: absolute;
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, #87CEFA, #90EE90);
+  z-index: -2;
+}
+
+/* Awan */
+.awan {
+  position: absolute;
+  background: white;
+  border-radius: 50px;
+  opacity: 0.95;
+}
+
+.awan-1 {
+  width: 100px;
+  height: 40px;
+  top: 15%;
+  left: 10%;
+  animation: melayang 12s linear infinite;
+}
+
+.awan-2 {
+  width: 140px;
+  height: 50px;
+  top: 25%;
+  left: 70%;
+  animation: melayang 18s linear infinite reverse;
+}
+
+@keyframes melayang {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(30px); }
+}
+
+/* Rumput bawah */
+.rumput {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 22%;
+  background: #76C963;
+  border-top-left-radius: 60% 30%;
+  border-top-right-radius: 60% 30%;
   z-index: -1;
 }
 
+/* Nama Aplikasi */
 .nama-aplikasi {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: #FFD700;
-  text-shadow: 3px 3px #FF8C00;
-  margin-bottom: 2rem;
+  text-shadow:
+    3px 3px 0 #FF8C00,
+    -1px -1px 0 #FFFFFF;
+  margin-bottom: 2.5rem;
   text-align: center;
+  animation: memantul 2s ease-in-out infinite;
 }
 
+@keyframes memantul {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Baris Karakter */
 .baris-karakter {
   display: flex;
   gap: 2rem;
@@ -52,77 +103,81 @@ body {
 }
 
 .karakter {
-  font-size: 4rem;
+  font-size: 4.5rem;
   animation: naikTurun 2s infinite ease-in-out;
 }
 
 @keyframes naikTurun {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  50% { transform: translateY(-12px); }
 }
 
 .karakter:nth-child(2) { animation-delay: 0.2s; }
 .karakter:nth-child(3) { animation-delay: 0.4s; }
 .karakter:nth-child(4) { animation-delay: 0.6s; }
 
+/* Teks Memuat */
 .teks-memuat {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #2F4F4F;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
+/* Bar Pemuatan */
 .kotak-bar {
-  width: 250px;
-  height: 25px;
-  background: #ddd;
+  width: 260px;
+  height: 22px;
+  background: #E8E8E8;
   border-radius: 15px;
   overflow: hidden;
   border: 3px solid #FF8C00;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .isi-bar {
   width: 0%;
   height: 100%;
-  background: linear-gradient(to right, #FFA500, #FFFF00);
+  background: linear-gradient(to right, #FFD700, #FF8C00, #FF6347);
   border-radius: 12px;
-  transition: width 0.3s;
+  transition: width 0.3s ease;
 }
 
 .persen {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #2F4F4F;
+  color: #555;
 }
 
 /* === LAYAR 2: PILIH BAHASA === */
 #layar-bahasa {
-  background: #2c2c2c;
+  background: rgba(0,0,0,0.6);
 }
 
 .kotak-pilih-bahasa {
   background: white;
-  padding: 3rem;
+  padding: 2.5rem;
   border-radius: 20px;
   border: 4px solid;
-  border-image: linear-gradient(to right, #FF00FF, #00FFFF) 1;
+  border-image: linear-gradient(to right, #FFD700, #FF8C00) 1;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .kotak-pilih-bahasa h2 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #FF4500;
 }
 
 .tombol-bahasa {
-  padding: 1.5rem 2rem;
-  font-size: 1.3rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 12px;
-  background: #1E90FF;
+  background: linear-gradient(to right, #1E90FF, #00BFFF);
   color: white;
   cursor: pointer;
   transition: transform 0.2s;
