@@ -8,11 +8,17 @@
 </head>
 <body>
 
+  <!-- LATAR BELAKANG -->
+  <div id="latar-pembuka">
+    <div class="awan awan-1"></div>
+    <div class="awan awan-2"></div>
+    <div class="rumput"></div>
+  </div>
+
   <!-- LAYAR 1: PEMBUKA -->
-  <div id="layar-pembuka" class="layar aktif">
-    <div class="latar-pembuka"></div>
+  <div class="layar aktif" id="layar-pembuka">
     <h1 class="nama-aplikasi">Cerdas Anak Hebat</h1>
-    
+
     <div class="baris-karakter">
       <div class="karakter">🐱</div>
       <div class="karakter">🐰</div>
@@ -20,26 +26,23 @@
       <div class="karakter">🐻</div>
     </div>
 
-    <p class="teks-memuat">Memuat...</p>
+    <div class="teks-memuat">Memuat...</div>
+
     <div class="kotak-bar">
-      <div id="bar-memuat" class="isi-bar"></div>
+      <div class="isi-bar" id="isiBar"></div>
     </div>
-    <p id="angka-persen" class="persen">0%</p>
+
+    <div class="persen" id="persen">0%</div>
   </div>
 
   <!-- LAYAR 2: PILIH BAHASA -->
-  <div id="layar-bahasa" class="layar">
+  <div class="layar" id="layar-bahasa">
     <div class="kotak-pilih-bahasa">
       <h2>Pilih Bahasa</h2>
-      <button class="tombol-bahasa" onclick="pilihBahasa('id')">
-        🇮🇩 Bahasa Indonesia
-      </button>
-      <button class="tombol-bahasa" onclick="pilihBahasa('en')">
-        🇬🇧 English
-      </button>
+      <button class="tombol-bahasa" onclick="pilihBahasa('id')">🇮🇩 Indonesia</button>
+      <button class="tombol-bahasa" onclick="pilihBahasa('en')">🇬🇧 English</button>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
