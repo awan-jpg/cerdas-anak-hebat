@@ -39,12 +39,16 @@ body {
 
 /* Awan */
 .awan {
-  position: absolute;
-  width: 150px;
-  height: auto;
-  opacity: 1;
- text-indent: -9999px;
- }
+  position: absolute !important;
+  width: 150px !important;
+  height: auto !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
 .awan-1 {
   top: 8%;
