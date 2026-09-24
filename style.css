@@ -42,9 +42,9 @@ body {
   position: absolute;
   width: 150px;
   height: auto;
-  opacity: 0.95;
+  opacity: 1;
  text-indent: -9999px;
-}
+ }
 
 .awan-1 {
   top: 8%;
