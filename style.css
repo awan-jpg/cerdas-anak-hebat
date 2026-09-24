@@ -1,1 +1,133 @@
+/* === PENGATURAN DASAR === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
+body {
+  overflow: hidden;
+  user-select: none;
+}
+
+/* === SEMUA LAYAR === */
+.layar {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.layar.aktif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === LAYAR 1: PEMBUKA === */
+.latar-pembuka {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #87CEFA, #90EE90);
+  z-index: -1;
+}
+
+.nama-aplikasi {
+  font-size: 3rem;
+  color: #FFD700;
+  text-shadow: 3px 3px #FF8C00;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.baris-karakter {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.karakter {
+  font-size: 4rem;
+  animation: naikTurun 2s infinite ease-in-out;
+}
+
+@keyframes naikTurun {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.karakter:nth-child(2) { animation-delay: 0.2s; }
+.karakter:nth-child(3) { animation-delay: 0.4s; }
+.karakter:nth-child(4) { animation-delay: 0.6s; }
+
+.teks-memuat {
+  font-size: 1.5rem;
+  color: #2F4F4F;
+  margin-bottom: 0.5rem;
+}
+
+.kotak-bar {
+  width: 250px;
+  height: 25px;
+  background: #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #FF8C00;
+}
+
+.isi-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #FFA500, #FFFF00);
+  border-radius: 12px;
+  transition: width 0.3s;
+}
+
+.persen {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2F4F4F;
+}
+
+/* === LAYAR 2: PILIH BAHASA === */
+#layar-bahasa {
+  background: #2c2c2c;
+}
+
+.kotak-pilih-bahasa {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  border: 4px solid;
+  border-image: linear-gradient(to right, #FF00FF, #00FFFF) 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kotak-pilih-bahasa h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #FF4500;
+}
+
+.tombol-bahasa {
+  padding: 1.5rem 2rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 12px;
+  background: #1E90FF;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.tombol-bahasa:hover {
+  transform: scale(1.05);
+}
