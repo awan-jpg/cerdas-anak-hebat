@@ -41,24 +41,22 @@ body {
 .awan {
   position: absolute;
   background: white;
-  border-radius: 50px;
+  border-radius: 50%;
   opacity: 0.95;
 }
 
 .awan-1 {
-  width: 100px;
-  height: 40px;
-  top: 15%;
-  left: 10%;
-  animation: melayang 12s linear infinite;
+  width: 120px;
+  height: 60px;
+  top: 8%;
+  left: 5%;
 }
 
 .awan-2 {
-  width: 140px;
-  height: 50px;
-  top: 25%;
-  left: 70%;
-  animation: melayang 18s linear infinite reverse;
+  width: 150px;
+  height: 70px;
+  top: 10%;
+  right: 5%;
 }
 
 @keyframes melayang {
